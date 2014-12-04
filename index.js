@@ -1,5 +1,5 @@
 // SET THESE VARIABLES
-var siteToMonitor = 'http://www.google.com/adsfasdf';
+var siteToMonitor = 'http://www.google.com';
 var wifiSettings = {
   ssid: "technicallyWifi", // Your wifi network
   password: "scriptstick", // Your wifi password
