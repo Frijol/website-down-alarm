@@ -1,5 +1,5 @@
 // SET THESE VARIABLES
-var siteToMonitor = 'http://www.google.com';
+var siteToMonitor = 'https://tessel.io/';
 var wifiSettings = {
   ssid: "technicallyWifi", // Your wifi network
   password: "scriptstick", // Your wifi password
@@ -24,32 +24,37 @@ relay.on('ready', function relayReady () {
 
 // Main function: runs when everything is ready
 function main() {
-  console.log('Ready! Pinging website...');
-  // Check status of website
-  setInterval(function checkSite() {
-    http.get(siteToMonitor, function(res) {
-      console.log("Got response: " + res.statusCode);
-      // Check for bad status
-      if(res.statusCode == 200) {
-        relay.turnOff(1, function (err) {
-          if(err) {
-            console.log(err);
-            systemError();
-          }
-        });
-      } else {
-        relay.turnOn(1, function (err) {
-          if(err) {
-            console.log(err);
-            systemError();
-          }
-        });
-      }
-    }).on('error', function(e) {
-      console.log("Got error: " + e.message);
-      systemError();
-    });
-  }, 2000); // Every 10 seconds
+  console.log('Ready!');
+  checkSite();
+}
+
+// Check status of website
+function checkSite() {
+  console.log('Pinging website...');
+  http.get(siteToMonitor, function(res) {
+    console.log("Got response: " + res.statusCode);
+    // Turn light on/off according to result
+    if(res.statusCode == 200 || res.statusCode == 302) {
+      relay.turnOff(1, function (err) {
+        if(err) {
+          console.log(err);
+          systemError();
+        }
+      });
+    } else {
+      relay.turnOn(1, function (err) {
+        if(err) {
+          console.log(err);
+          systemError();
+        }
+      });
+    }
+    // Repeat every few seconds
+    setTimeout(checkSite, 10000);
+  }).on('error', function(e) {
+    console.log("Got error: " + e.message);
+    systemError();
+  });
 }
 
 function checkConnection () {
