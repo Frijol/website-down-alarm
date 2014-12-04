@@ -1,0 +1,30 @@
+{
+  "name": "website-down-alarm",
+  "version": "1.0.0",
+  "description": "Pings a URL and causes an alarm light to flash if the status code is not 200",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frijol/website-down-alarm.git"
+  },
+  "keywords": [
+    "tessel",
+    "alarm",
+    "light",
+    "siren",
+    "relay",
+    "status"
+  ],
+  "author": "Kelsey Breseman",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Frijol/website-down-alarm/issues"
+  },
+  "homepage": "https://github.com/Frijol/website-down-alarm",
+  "dependencies": {
+    "relay-mono": "^0.1.2"
+  }
+}
