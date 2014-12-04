@@ -1,7 +1,10 @@
 website-down-alarm
 ==================
 
-Pings a URL and causes an alarm light to run continuously if the status code is not 200.
+This Tessel project pings a URL and causes an alarm light to run continuously if the status code is not 200.
+
+**If your website goes down, you want to be the first to know.**
+Make it obvious when there's a problem by hooking up a big alarm light to a Tessel, which will ping your website every few seconds to check for trouble.
 
 ## Light patterns
 
