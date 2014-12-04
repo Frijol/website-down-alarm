@@ -24,4 +24,8 @@ Pings a URL and causes an alarm light to run continuously if the status code is 
 
 1. Clone this repo
 2. `npm install` to install dependencies
-3. 
+3. Ensure your hardware is set up properly by running `tessel run relay-test.js`. If nothing happens, check your connections and refer to the [Relay Guide](http://start.tessel.io/modules/relay)
+4. In `index.js`, change the wifi settings and site to monitor to suit your needs
+5. To run temporarily with logs, `tessel run index.js`
+6. To program for long-term use, `tessel push index.js`
+7. You can now unplug Tessel from your computer and power externally according to the [guide](https://tessel.io/docs/untethered)
