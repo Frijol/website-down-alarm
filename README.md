@@ -16,7 +16,7 @@ Make it obvious when there's a problem by hooking up a big alarm light to a Tess
 
 * [Tessel](//tessel.io)
 * [Relay Module](//tessel.io/modules#module-relay)
-* [Alarm light](http://www.amazon.com/gp/product/B00EPP56GY/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
+* [Alarm light](https://amzn.to/2VjATdk)
 
 ![](https://lh5.googleusercontent.com/-eRv927oK4XQ/VIDmC4cql_I/AAAAAAAALUw/P-J2lKn2FX8/w828-h466-no/20141204_095736.jpg)
 
